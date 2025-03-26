@@ -1,0 +1,30 @@
+body {
+  font-size: 1.1rem;
+  text-align: center;
+  /*center horizontally*/
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+p {
+  width: 400px;
+  border: 1px solid red;
+  margin: 0 auto;
+  min-height: 200px;
+  padding: 1rem 3rem 10px 20px;
+  border-bottom: 3px dashed greenyellow;
+}
+
+.vcent {
+  line-height: 170px;
+  background-color: rgb(66, 86, 63);
+}
+span {
+  color: blue;
+  display: block;
+}
