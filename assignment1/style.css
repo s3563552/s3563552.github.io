@@ -1,25 +1,11 @@
 /*mycolour.space has gradients you can create so i used it for my background*/
 body {
-  background-image: linear-gradient(
-    to right top,
-    #4bae83,
-    #42a274,
-    #3a9765,
-    #328b56,
-    #2b8048,
-    #347638,
-    #3a6d29,
-    #3e631b,
-    #4a580b,
-    #524d00,
-    #574200,
-    #5a3701
-  );
+  background-color: #27a153;
   text-align: start;
   margin: auto;
   justify-content: center;
   align-items: center;
-  color: #b0a8b9;
+  color: #737b4c;
   font-family: "Roboto", sans-serif;
 }
 /*wanted my h1 to be in the top at the middle - had to specify to have it at the top in the middle*/
@@ -27,7 +13,6 @@ h1 {
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 20px;
-  top: auto;
   text-align: center;
 }
 h2 {
@@ -39,22 +24,34 @@ h3 {
   font-size: 1.5rem;
   font-weight: bold;
 }
-/*styling for header, so it applies to both the child elements cutting down on code and making the code more readable*/
+/*styling for header, so it applies to both the child elements cutting down on code and making the code more readable. 
+couldn't get the box to center so i googled it and setting margin to auto worked. also added some padding to the left, 
+right and top so that it would look more centered.*/
 #header {
   display: flex;
   justify-content: center;
+  /*this aligns text to it's baseline*/
   align-items: baseline;
+  width: fit-content;
   gap: 50px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 20px;
   font-family: "Black Han Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #4b4453;
+  color: #e2e4d6;
+  border: 3px solid black;
+  background-color: #414627;
+  /*this automatically distributes the space between the edge of the site so the header flex box is centered*/
+  margin: auto;
 }
 /*made the numbers for the list stand out more so it's easier on the eyes*/
 .bold {
   font-weight: bold;
   font-size: 1.1rem;
 }
+/*this is my set up for the grid, i went with a 5x5 because I felt like it made the most sense layout wise especially for question 2*/
 #questions {
   padding: 10px;
   display: grid;
@@ -66,9 +63,9 @@ h3 {
 
 /*used a class since i wanted all the questions to be styled the same*/
 .q {
-  border: 2.5px solid #845ec2;
+  border: 3px solid black;
   padding: 6px;
-  background-color: #4b4453;
+  background-color: #e2e4d6;
 }
 /*set the position next to question 1 and gave it enough space to fit all the information. 
 I only need to style the parent to make the list and disclaimer styled in the same way so i
@@ -80,12 +77,13 @@ hard to read i gave it a gap to seperate them*/
   gap: 10px;
   grid-row: 1/2;
   grid-column: 2/6;
-  border: 2.5px solid #845ec2;
-  padding: 6px;
-  background-color: #4b4453;
+  border: 3px solid black;
+  padding: 10px;
+  background-color: #e2e4d6;
 }
 
-/*Originally had an ordered list but the nunmbers stuck out of the box, so I removed the numbers and added them back manually*/
+/*Originally had an ordered list but the nunmbers stuck out of the box, so I removed the numbers and added them back 
+manually*/
 ol {
   list-style-type: none;
 }
