@@ -1,8 +1,91 @@
+/*mycolour.space has gradients you can create so i used it for my background*/
+body {
+  background-image: linear-gradient(
+    to right top,
+    #4bae83,
+    #42a274,
+    #3a9765,
+    #328b56,
+    #2b8048,
+    #347638,
+    #3a6d29,
+    #3e631b,
+    #4a580b,
+    #524d00,
+    #574200,
+    #5a3701
+  );
+  text-align: start;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  color: #b0a8b9;
+  font-family: "Roboto", sans-serif;
+}
+/*wanted my h1 to be in the top at the middle - had to specify to have it at the top in the middle*/
 h1 {
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 20px;
+  top: auto;
+  text-align: center;
 }
+h2 {
+  top: auto;
+  text-align: center;
+}
+/*I */
 h3 {
   font-size: 1.5rem;
+  font-weight: bold;
+}
+/*styling for header, so it applies to both the child elements cutting down on code and making the code more readable*/
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 50px;
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #4b4453;
+}
+/*made the numbers for the list stand out more so it's easier on the eyes*/
+.bold {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+#questions {
+  padding: 10px;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: start;
+}
+
+/*used a class since i wanted all the questions to be styled the same*/
+.q {
+  border: 2.5px solid #845ec2;
+  padding: 6px;
+  background-color: #4b4453;
+}
+/*set the position next to question 1 and gave it enough space to fit all the information. 
+I only need to style the parent to make the list and disclaimer styled in the same way so i
+saved space and only styled the parent.
+Since the text from both the children flex boxs were too close to each other, which made it 
+hard to read i gave it a gap to seperate them*/
+#q2 {
+  display: flex;
+  gap: 10px;
+  grid-row: 1/2;
+  grid-column: 2/6;
+  border: 2.5px solid #845ec2;
+  padding: 6px;
+  background-color: #4b4453;
+}
+
+/*Originally had an ordered list but the nunmbers stuck out of the box, so I removed the numbers and added them back manually*/
+ol {
+  list-style-type: none;
 }

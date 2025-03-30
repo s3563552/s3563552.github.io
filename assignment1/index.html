@@ -6,11 +6,24 @@
     <title>assignment 1</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+Gunjala+Gondi:wght@400..700&family=Noto+Sans+Symbols:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+Gunjala+Gondi:wght@400..700&family=Noto+Sans+Symbols:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>Assignment 1</h1>
+    <div id="header">
+      <h1>Assignment 1</h1>
+      <h2>Nathan Liu (s3563552)</h2>
+    </div>
+  <!--setting up the items to style into a grid-->
     <div id="questions">
-      <div id="q1">
+      <div class="q">
         <h3>
           Question 1: What was the first thing you paid attention to when
           interacting with the experience?
@@ -23,77 +36,83 @@
           clean and simple but at the same time looked technically impressive.
         </p>
       </div>
+       <!--I had an idea of splitting question 2 into 2 seperate parts, but wanted them to be the same item on the grid. so i made a div with 2 child elements the disclaimer and the list -->
       <div id="q2">
-        <h3>
-          Question 2: Spend two minutes with the experience and create a list of
-          each of your discrete actions.
-        </h3>
-        <p>
-          Just as a disclaimer, there were two issues for me which made me think
-          the homepage was static and that I couldn’t scroll down. These issues
-          would have been fine in isolation, however when experienced at the
-          same time caused me to miss the most important content – his
-          portfolio. The site behaves differently on higher resolution monitors.
-          On a lower resolution monitor, the size and positioning of text scales
-          differently and touches the bottom of the window. This is important
-          since it suggests that users should scroll to find more information.
-          This in combination with the lack of a scrolling bar at the side meant
-          that there was no indication of content further down and as a result I
-          didn’t get to look at his portfolio work – it was enough to make me
-          second guess if the purpose of the site was to be a portfolio.
-        </p>
-        <ol>
-          <li>Navigated to the site</li>
-          <li>I scanned quickly scanned over the larger text.</li>
-          <li>
-            Started moving my mouse and noticed that the cursor was different
-            and had a trailing tail on it. Spent time playing around with the
-            mouse and drawing circles around the text.
-          </li>
-          <li>
-            I Moved my mouse around the page, briefly hovering over things to
-            see if they would react and if they were clickable.
-          </li>
-          <li>
-            Attempted to read some of the smaller text, I got halfway and gave
-            up because my eyes started to hurt.
-          </li>
-          <li>Clicked the large ‘R’, didn’t seem to do anything.</li>
-          <li>Clicked the large ‘B’, and opened the Q&A section.</li>
-          <li>
-            Read smaller text this time. I finished reading it this time,
-            because I thought reading more of his Q&A section would give me a
-            better idea of the goal of the website – which I started to feel was
-            more a portfolio.
-          </li>
-          <li>
-            Clicked the T shape on the right, because I clicked in in the Q&A
-            section it made me think it did something.
-          </li>
-          <li>
-            Because thought ‘T’ shape did something, after I returned to the
-            home page, I tried clicking the left and right ones - nothing
-            happened.
-          </li>
-          <li>
-            Reloaded the site because I thought maybe I had encountered a bug or
-            the site hadn’t loaded properly. I retried clicking the R and the T
-            shapes again, but it didn’t seem to do anything, so I moved on.
-          </li>
-          <li>Played with the mouse for a little bit.</li>
-          <li>Hovered over the “+” in the oval, found a menu.</li>
-          <li>
-            Clicked all the tabs, looked at his awards page and spent a little
-            bit of time on his IG to find out some more about him. Instantly
-            closed the LinkedIN, BE tab and email.
-          </li>
-          <li>
-            Went back to try and read some of small text on the homepage and
-            realised I had gone over 2 minutes.
-          </li>
-        </ol>
+        <div id="dis">
+          <h3>
+            Question 2: Spend two minutes with the experience and create a list of
+           each of your discrete actions.
+          </h3>
+          <p>
+            Just as a disclaimer, there were two issues for me which made me think
+            the homepage was static and that I couldn’t scroll down. These issues
+            would have been fine in isolation, however when experienced at the
+            same time caused me to miss the most important content – his
+            portfolio. The site behaves differently on higher resolution monitors.
+            On a lower resolution monitor, the size and positioning of text scales
+            differently and touches the bottom of the window. This is important
+            since it suggests that users should scroll to find more information.
+            This in combination with the lack of a scrolling bar at the side meant
+            that there was no indication of content further down and as a result I
+            didn’t get to look at his portfolio work – it was enough to make me
+            second guess if the purpose of the site was to be a portfolio.
+          </p>
+        </div>
+        <div id="list">
+          <h3>List of Actions:</h3>
+          <ol>
+            <li><span class = "bold">1.</span> Navigated to the site</li>
+            <li><span class = "bold">2.</span> I scanned quickly scanned over the larger text.</li>
+            <li>
+              <span class = "bold">3.</span> Started moving my mouse and noticed that the cursor was different
+              and had a trailing tail on it. Spent time playing around with the
+              mouse and drawing circles around the text.
+            </li>
+            <li>
+              <span class = "bold">4.</span> I Moved my mouse around the page, briefly hovering over things to
+              see if they would react and if they were clickable.
+            </li>
+            <li>
+              <span class = "bold">5.</span> Attempted to read some of the smaller text, I got halfway and gave
+              up because my eyes started to hurt.
+            </li>
+            <li> <span class = "bold">6.</span> Clicked the large ‘R’, didn’t seem to do anything.</li>
+            <li>Clicked the large ‘B’, and opened the Q&A section.</li>
+            <li>
+              <span class = "bold">7.</span> Read smaller text this time. I finished reading it this time,
+              because I thought reading more of his Q&A section would give me a
+              better idea of the goal of the website – which I started to feel was
+              more a portfolio.
+            </li>
+            <li>
+              <span class = "bold">8.</span> Clicked the T shape on the right, because I clicked in in the Q&A
+              section it made me think it did something.
+            </li>
+            <li>
+              <span class = "bold">9.</span> Because thought ‘T’ shape did something, after I returned to the
+              home page, I tried clicking the left and right ones - nothing
+              happened.
+            </li>
+            <li>
+              <span class = "bold">10.</span> Reloaded the site because I thought maybe I had encountered a bug or
+              the site hadn’t loaded properly. I retried clicking the R and the T
+              shapes again, but it didn’t seem to do anything, so I moved on.
+            </li>
+            <li><span class = "bold">11.</span> Played with the mouse for a little bit.</li>
+            <li><span class = "bold">12.</span> Hovered over the “+” in the oval, found a menu.</li>
+            <li>
+              <span class = "bold">13.</span> Clicked all the tabs, looked at his awards page and spent a little
+              bit of time on his IG to find out some more about him. Instantly
+              closed the LinkedIN, BE tab and email.
+            </li>
+            <li>
+              <span class = "bold">14.</span> Went back to try and read some of small text on the homepage and
+              realised I had gone over 2 minutes.
+            </li>
+          </ol>
+        </div>
       </div>
-      <div id="q3">
+      <div class="q">
         <h3>
           Question 3: What part of the experience did you spend the most time
           engaging with?
@@ -107,7 +126,7 @@
           due to the websites untraditional design.
         </p>
       </div>
-      <div id="q4">
+      <div class="q">
         <h3>
           Question 4: What was the most common action in your two-minute
           interaction with the experience?
@@ -119,7 +138,7 @@
           enough to become a bit of a distraction.
         </p>
       </div>
-      <div id="q5">
+      <div class="q">
         <h3>
           Question 5: What is your impression of the intended primary goal of
           the interactive experience?
@@ -132,7 +151,7 @@
           work all in an easily accessible and technically impressive way.
         </p>
       </div>
-      <div id="q6">
+      <div class="q">
         <h3>
           Question 6: How does the interactive experience communicate this
           primary goal?
@@ -150,7 +169,7 @@
           recognisable as a portfolio.
         </p>
       </div>
-      <div id="q7">
+      <div class="q">
         <h3>
           Question 7: What is your impression of how the experience should be
           interacted with over time? (For how long and how many different times)
@@ -164,7 +183,7 @@
           encourage return visits outside of the portfolio being updated.
         </p>
       </div>
-      <div id="q8">
+      <div class="q">
         <h3>
           Quesiton 8: How does the interactive experience communicate how it
           should be interacted with over time?
@@ -179,7 +198,7 @@
           visits of 15 minutes in length would be enough.
         </p>
       </div>
-      <div id="q9">
+      <div class="q">
         <h3>
           Question 9: What other media forms (digital or otherwise) does the
           experience reference?.
@@ -193,7 +212,7 @@
           the design is on much higher level in comparison.
         </p>
       </div>
-      <div id="q10">
+      <div class="q">
         <h3>
           Question 10: What does this reference/s communicate to you about how
           you should act when engaging with your research experience?
@@ -206,7 +225,7 @@
           and more intuitive experience.
         </p>
       </div>
-      <div id="q11">
+      <div class="q">
         <h3>
           Question 11: What does this reference/s communicate to you about how
           you should feel when engaging with your research experience?
@@ -219,7 +238,7 @@
           users.
         </p>
       </div>
-      <div id="q12">
+      <div class="q">
         <h3>
           Question 12: What is the most frustrating part of the interaction to
           you and what makes that part frustrating?
@@ -233,18 +252,17 @@
           static and there wasn’t anything to scroll down to.
         </p>
       </div>
-      <div id="q13">
-        <h3>
+    <div class="q">
+       <h3>
           Question 13: What is the most satisfying part of the interaction to
           you and what makes that part satisfying?
-        </h3>
-        <p>
+      </h3>
+      <p>
           Once I used the site on a device that didn’t come with scaling issues,
           I felt that the site felt very fluid. I think this was mostly because
           how you would navigate between each piece of content felt very natural
           and the flow of the website felt very intuitive.
-        </p>
-      </div>
+      </p>
     </div>
   </body>
 </html>
