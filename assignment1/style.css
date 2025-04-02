@@ -1,11 +1,23 @@
 /*mycolour.space has gradients you can create so i used it for my background*/
 body {
-  background-color: #27a153;
+  background-image: linear-gradient(
+    to right,
+    #36ece1,
+    #2ed8e3,
+    #41c4de,
+    #58afd1,
+    #689bbe,
+    #689bbe,
+    #689bbe,
+    #689bbe,
+    #58afd1,
+    #41c4de,
+    #2ed8e3,
+    #36ece1
+  );
   text-align: start;
   margin: auto;
-  justify-content: center;
-  align-items: center;
-  color: #737b4c;
+  color: #36ece1;
   font-family: "Roboto", sans-serif;
 }
 /*wanted my h1 to be in the top at the middle - had to specify to have it at the top in the middle*/
@@ -36,36 +48,43 @@ right and top so that it would look more centered.*/
   font-family: "Black Han Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #e2e4d6;
+  color: #545479;
   border: 3px solid black;
-  background-color: #414627;
+  background-color: #36ece1;
   /*this automatically distributes the space between the edge of the site so the header flex box is centered*/
   margin: auto;
+  border-radius: 15px;
 }
 /*used a flexbox since i knew i would only want to place items in a single column, I prefered the look of the clickable 
 text to be in the middle instead of aligned to the right so i had to change it here*/
+/*added rounding to the corners, found on the css page of w3 schools*/
 .pic {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #e2e4d6;
+  grid-row: 1/1;
+  grid-column: 1/4;
+  background-color: #545479;
   text-align: center;
   border: 3px solid black;
   padding: 6px;
+  border-radius: 15px;
+  /*width: fit-content;*/
 }
 /*made the numbers for the list stand out more so it's easier on the eyes*/
 .bold {
   font-weight: bold;
   font-size: 1.1rem;
 }
-/*this is my set up for the grid, i went with a 5x5 because I felt like it made the most sense layout wise especially for question 2*/
+/*this is my set up for the grid, i went with a 3x6 because I felt like it made the most sense layout wise especially for question 2.
+this let me display the questions on the last row without any gaps and present the text within each box in a more readable manner. */
 #questions {
   padding: 10px;
   display: grid;
   gap: 1rem;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, auto);
   justify-content: start;
 }
 
@@ -73,7 +92,8 @@ text to be in the middle instead of aligned to the right so i had to change it h
 .q {
   border: 3px solid black;
   padding: 6px;
-  background-color: #e2e4d6;
+  background-color: #545479;
+  border-radius: 15px;
 }
 /*set the position next to question 1 and gave it enough space to fit all the information. 
 I only need to style the parent to make the list and disclaimer styled in the same way so i
@@ -83,15 +103,30 @@ hard to read i gave it a gap to seperate them*/
 #q2 {
   display: flex;
   gap: 10px;
-  grid-row: 1/2;
-  grid-column: 2/3;
+  grid-row: 2/3;
+  grid-column: 2/4;
   border: 3px solid black;
   padding: 10px;
-  background-color: #e2e4d6;
+  background-color: #545479;
+  border-radius: 15px;
 }
-
 /*Originally had an ordered list but the nunmbers stuck out of the box, so I removed the numbers and added them back 
 manually*/
 ol {
   list-style-type: none;
+}
+/*positioning for question 9 and the video, made a horizontal flexbox*/
+#q9 {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: left;
+  grid-row: 5/5;
+  grid-column: 1/3;
+  background-color: #545479;
+  text-align: left;
+  border: 3px solid black;
+  padding: 6px;
+  gap: 90px;
+  border-radius: 15px;
 }
