@@ -28,6 +28,7 @@
 //myGuh = "Nathan"
 // let isItSunday = false;
 // let isit0ART1013 = true;
+
 //object variable
 // const myRecord = {
 // name: "nathan",
@@ -35,6 +36,9 @@
 // homeTown: "echuca",
 // isLocal: true,
 // };
+//objects
+//let myRecord = {name:buh, id:1, isLocal:true};
+
 // console.log(myRecord.name, myRecord.id, myRecord.homeTown, myRecord.isLocal);
 
 // let myCity = "melbourne";
