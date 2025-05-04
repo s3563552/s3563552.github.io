@@ -8,7 +8,8 @@ const muteImg = document.querySelector("#mute-button-img");
 //elements for the goals list
 const addGoalBtn = document.querySelector("#add-goal");
 const goalsList = document.querySelector("#goals-list");
-
+//tell the user to resize
+alert("You can make this window smaller to free up sreen real estate!");
 //I'm choosing to loop the background music since it's just supposed to be ambient sound while you study
 //it isn't supposed to end until the 45 min is up
 // initialised variables here, muted by default and get rid of the default audio player controls
