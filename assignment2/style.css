@@ -123,6 +123,7 @@ to avoid that i just put it outside of the <section>*/
   border: none;
   border-radius: 6px;
   margin: 0.2rem;
+  color: var(--main-text-color);
 }
 /**/
 #list-name {
