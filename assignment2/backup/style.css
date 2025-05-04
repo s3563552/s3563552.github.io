@@ -1,0 +1,160 @@
+:root {
+  --primary-bg-color: #256640;
+  --text-color: #ffffff;
+  --main-bg-color: #333;
+  --main-text-color: #ffffff;
+  --main-btn-bg-color: #4f8858;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: Hanalei Fill;
+  font-size: 4rem;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Header styling */
+header {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+/* I changed the container for the main content to have a decent size so that it would likely fit most peoples
+text for study goals but also not be too small. also made it adapt */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: auto;
+  background-color: rgb(32, 32, 247);
+  border-radius: 6px;
+  /*added padding here so it would match the margin at the bottom before an item is added to the list*/
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+/* timer styling*/
+#timer-display {
+  font-family: "Press Start 2P";
+  font-size: 2rem;
+  background-color: black;
+  color: green;
+  border-radius: 7px;
+  padding: 0.5rem;
+}
+
+/* Media player styling */
+.media-player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: rgb(240, 226, 228);
+}
+  /* I changed the container for the main content to have a decent size so that it would likely fit most peoples
+text for study goals but also not be too small. also made it adapt  for some reason adding border-radius: 6px; didn't make all elements 
+rounded inside the container. So I just added it manually to the items that I wanted to be rounded.*/
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: auto;
+    background-color: rgb(12, 12, 94);
+  }
+}
+.custom-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.custom-controls button {
+  background-color: var(--main-btn-bg-color);
+  color: var(--main-text-color);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+}
+/* Study Session Goals header and Add button side-by-side */
+section {
+  display: flex;
+  /* so that the list can wrap to the next line */
+  flex-wrap: wrap;
+  align-items: center;
+  /* space between h2 "study session goals" and add goal button */
+  gap: 0.5rem;
+  border-radius: 6px;
+}
+
+/* lay out the study session goals and button in one line */
+#goals-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5 rem;
+}
+
+/* i wanted the list to be under the study sessions goals text and the Add goals button, flex basis: 100 will fill  the row and push it down.
+I encountered a problem where the positioning of "study session goals" and the add goal button would change after adding an item.
+to avoid that i just put it outside of the <section>*/
+#goals-list {
+  flex-basis: 100%;
+  margin-top: 0.5rem;
+  list-style: none;
+}
+#add-goal {
+  margin-left: 1rem;
+  padding: 0.25rem;
+  font-size: 10px;
+  background-color: var(--main-btn-bg-color);
+}
+/**/
+#list-name {
+  background-color: antiquewhite;
+  border-radius:  6px;
+  margin: 0.5 rem;
+}
+/* this is styling for the goals list items, i had to do this anyway since i wanted to make the items in the list look centered vertically */
+#goals-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  background: #7c5a5a;
+  border-radius: 6px;
+}
+/*/* margin gives a bit of space between text and button, if i don't do this the longest item in the list's last letter touches the button
+and it becomes hard to read*/
+#goals-list li button {
+  margin-left: 1rem;
+  padding: 0.25rem;
+  font-size: 10px;
+}
+/* Footer styling */
+footer {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}

@@ -1,0 +1,151 @@
+:root {
+  --primary-bg-color: #a16464;
+  --text-color: #ffffff;
+  --main-bg-color: #0d3b66;
+  --main-text-color: #000000;
+  --main-btn-bg-color: #f4d35e;
+  --btn-text-color: black;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: Hanalei Fill;
+  font-size: 4rem;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background: linear-gradient(
+    189deg,
+    rgba(244, 211, 94, 1) 0%,
+    rgba(102, 102, 102, 1) 0%,
+    rgba(244, 211, 94, 1) 100%
+  );
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Header styling */
+header {
+  color: var(--main-text-color);
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: auto;
+  background-color: var();
+}
+/* timer styling*/
+#timer-display {
+  font-family: "Press Start 2P";
+  font-size: 2rem;
+  background-color: black;
+  color: var(--main-btn-bg-color);
+  border-radius: 7px;
+  padding: 0.5rem;
+}
+
+/* Media player styling */
+.media-player {
+  display: flex; /* vertical stack */
+  flex-direction: column; /* timer first, controls second */
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  border-radius: 6px;
+}
+
+.custom-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 6px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.2rem;
+}
+
+.custom-controls button {
+  background-color: var(--main-btn-bg-color);
+  color: var(--main-text-color);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+}
+
+/* study Session goals header and Add button side-by-side */
+section {
+  display: flex;
+  /* so that the list can wrap to the next line */
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 6px;
+  padding: 0.2rem;
+}
+
+/* lay out the study session goals and button in one line */
+#goals-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.5 rem;
+}
+
+/* i wanted the list to be under the study sessions goals text and the Add goals button, flex basis: 100 will fill  the row and push it down.
+I encountered a problem where the positioning of "study session goals" and the add goal button would change after adding an item.
+to avoid that i just put it outside of the <section>*/
+#goals-list {
+  flex-basis: 100%;
+  margin-top: 0.5rem;
+  list-style: none;
+}
+#goals-list li button,
+#add-goal {
+  margin-left: 1rem;
+  padding: 0.25rem;
+  font-size: 10px;
+  background-color: var(--main-btn-bg-color);
+  border: none;
+  border-radius: 6px;
+  margin: 0.2rem;
+}
+/**/
+#list-name {
+  background-color: var(--main-text-color);
+  border-radius: 6px;
+  padding-left: 0.2rem;
+}
+/* this is styling for the goals list items, i had to do this anyway since i wanted to make the items in the list look centered vertically */
+#goals-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  background: var(--main-text-color);
+  border-radius: 6px;
+}
+
+/* Footer styling */
+footer {
+  color: var(--main-text-color);
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  font-size: 0.3rem;
+}

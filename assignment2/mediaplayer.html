@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 2</title>
+    <!-- add the font family of your choice -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <!-- fonts, jsut commenting so i can see things easier-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=Press+Start+2P&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>Pomodoro Study Buddy</h1>
+    </header>
+    <!-- I'm reusing the old container and just putting everything inside of it.-->
+    <main class="container">
+      <!-- Media Player Section, I wanted to put the countdown timer and the button to start study
+       and the button to mute/unmute the BGM in the same div, I will use css to position it so that
+       timer is on top with two buttons under it  -->
+      <div class="media-player">
+        <div id="timer-display">45:00</div>
+        <div class="custom-controls">
+          <!-- Start study will start the countdown and also play the BGM -->
+          <button id="start-study">Start Study</button>
+          <button id="mute-button">
+            <img
+              id="mute-button-img"
+              src="https://img.icons8.com/ios-glyphs/30/no-audio--v1.png"
+              alt="Mute/Unmute"
+              width="24"
+              height="24"
+            />
+          </button>
+        </div>
+      </div>
+      <!-- Background music source, had to put it somewhere -->
+      <audio
+        id="study-bgm-player"
+        src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/erokia_ambient-wave-56-msfxp7-78.mp3"
+      ></audio>
+
+      <!-- I chose to add a editable study goal list to the <section> since it makes sense
+        as a feature to have along side a study timer. -->
+      <section>
+        <!--I put the button inside the h2 string because it was just easier, i spent a lot of time on this assignment
+        and was looking to save time. I wanted it to look like this, originally I had the button outside of the heading but
+        after i implemented the list it would change the positioning of the text and button. It was probably due to some errors i originally had 
+        in my style.css - this was just my work around.-->
+        <!--this is a button which will combine with some js code to allow people to add goals to the goals list below-->
+        <h2 id="list-name">
+          Study Session Goals<button id="add-goal">Add Goal</button>
+        </h2>
+      </section>
+      <!--an unpopulated list, this is where the users goals will go.
+      I had to put it outside of the <section> since it would mess with the positioning of the study sessions goals text 
+      and teh add gaol button.-->
+      <ul id="goals-list"></ul>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 Media Player Website. All rights reserved.</p>
+      <a href="https://img.icons8.com/ios-glyphs/30/no-audio--v1.png"
+        >No audio</a
+      >
+      icon by
+      <a href="https://icons8.com">Icons8</a>
+      <a href="https://img.icons8.com/ios-glyphs/30/high-volume--v1.png"
+        >High volume</a
+      >
+      icon by
+      <a href="https://icons8.com">Icons8</a>
+    </footer>
+  </body>
+</html>
