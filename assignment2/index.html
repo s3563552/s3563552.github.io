@@ -33,6 +33,8 @@
         <!--https://www.youtube.com/watch?v=BrpiNUf2XCk
           followed the above video after searched how to make a volume slider on youtube.-->
         <div id="slider-container">
+          <!--put the volume level and it's text above the bar so users don't confuse the bar as a progess bar for the countdown timer (just in case)-->
+          <p>Volume: <span id="volume"> 0</span></p>
           <input
             class="slider"
             type="range"
@@ -41,7 +43,6 @@
             value="0"
             step="1"
           />
-          <p>Volume: <span id="volume"> 0</span></p>
         </div>
         <div class="custom-controls">
           <!-- Start study will start the countdown and also play the BGM -->
