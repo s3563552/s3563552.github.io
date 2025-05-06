@@ -30,6 +30,19 @@
        timer is on top with two buttons under it  -->
       <div class="media-player">
         <div id="timer-display">45:00</div>
+        <!--https://www.youtube.com/watch?v=BrpiNUf2XCk
+          followed the above video after searched how to make a volume slider on youtube.-->
+        <div id="slider-container">
+          <input
+            class="slider"
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            step="1"
+          />
+          <p>Volume: <span id="volume"> 0</span></p>
+        </div>
         <div class="custom-controls">
           <!-- Start study will start the countdown and also play the BGM -->
           <button id="start-study">Start Study</button>

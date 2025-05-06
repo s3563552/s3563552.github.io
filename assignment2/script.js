@@ -8,11 +8,17 @@ const muteImg = document.querySelector("#mute-button-img");
 //elements for the goals list
 const addGoalBtn = document.querySelector("#add-goal");
 const goalsList = document.querySelector("#goals-list");
+//volume slider
+const slider = document.querySelector(".slider");
+const output = document.querySelector("#volume");
+
 //tell the user to resize
-alert("You can make this window smaller to free up sreen real estate!");
+///////alert("You can make this window smaller to free up sreen real estate!");
 //I'm choosing to loop the background music since it's just supposed to be ambient sound while you study
 //it isn't supposed to end until the 45 min is up
 // initialised variables here, muted by default and get rid of the default audio player controls
+
+//audioBGM.volume just points to the audio level of the file
 audioBGM.volume = 0;
 audioBGM.controls = false;
 audioBGM.loop = true;
@@ -21,6 +27,30 @@ audioBGM.loop = true;
 // the second variable is just for stopping music at 45 min
 let remainingTime = 45 * 60; // seconds
 let timeRec;
+//made a variable to store the volume so match the volume from before muting
+let lastVolume = 1;
+
+function updateSlider() {
+  // slightly changed from yt video, he used values from 1-100 so i had to make it a value between 0-1 to match my BGM value
+  audioBGM.volume = this.value / 100;
+  output.textContent = this.value;
+  // Originally i only had a mute or unmute which set the volume to 0 or 1. this became annoyting when i made a slider so i
+  //added this if statement to store the
+  if (audioBGM.volume > 0) {
+    lastVolume = audioBGM.volume;
+  }
+}
+//update the slider background just followed the yt video for this one
+function sliderBG() {
+  var x = slider.value;
+  var colour =
+    "linear-gradient(90deg, rgb(244, 211, 94)" +
+    x +
+    "%, rgb(102, 102, 102, 1)" +
+    x +
+    "%";
+  slider.style.background = colour;
+}
 
 //  Start study: play music (unmute) + start countdown
 function startCountdown() {
@@ -66,12 +96,21 @@ function updateDisplay(sec) {
 function toggleMuteUnmute() {
   //if audio is not 0 it means it is on, if it is on the if statement triggers setting the volume to 0 and changing the img to muted icon
   //I will use an event listener to call this function
+  //modified the function to take in the level of volume before muting, it also updates the slider value
   if (audioBGM.volume > 0) {
+    lastVolume = audioBGM.volume;
+    slider.value = 0;
+    output.textContent = 0;
     audioBGM.volume = 0;
     muteImg.src = "https://img.icons8.com/ios-glyphs/30/no-audio--v1.png";
   } else {
-    audioBGM.volume = 1;
+    //audioBGM.volume = 1; originally just had it as a mute un-mute button with no volume control
+    //no i set the unmuted volume to what it was before being muted
+    audioBGM.volume = lastVolume;
     muteImg.src = "https://img.icons8.com/ios-glyphs/30/high-volume--v1.png";
+    slider.value = Math.round(lastVolume * 100);
+    output.textContent = slider.value;
+    //this helps store the last volume
   }
 }
 //this section is for the goal list, i will trigger it through the add goal button
@@ -98,6 +137,11 @@ function addGoal() {
   // this line just adds the new list item onto the bottom of the list
   goalsList.appendChild(li);
 }
+
+//volume slider, for setting volume
+slider.addEventListener("input", updateSlider);
+// volume slider to adjust the yellow indicator
+slider.addEventListener("mousemove", sliderBG);
 //  even listners to trigger functions from clicking buttons
 addGoalBtn.addEventListener("click", addGoal);
 startStudyBtn.addEventListener("click", startCountdown);

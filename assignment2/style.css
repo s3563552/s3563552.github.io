@@ -11,7 +11,7 @@ h1 {
   margin: 0;
   padding: 0;
   font-family: Hanalei Fill;
-  font-size: 6rem;
+  font-size: 5rem;
 }
 
 body {
@@ -87,6 +87,7 @@ header {
   display: flex;
   align-items: center;
   border-radius: 6px;
+  opacity: 0.8;
 }
 
 /* study Session goals header and Add button side-by-side */
@@ -125,6 +126,7 @@ to avoid that i just put it outside of the <section>*/
   border-radius: 6px;
   margin: 0.2rem;
   color: var(--main-text-color);
+  opacity: 0.8;
 }
 /**/
 #list-name {
@@ -150,4 +152,52 @@ footer {
   padding: 10px 0;
   width: 100%;
   font-size: 0.9rem;
+}
+
+/*styling the sliders i just adjusted teh things i saw in the youtube tutorial, it also reminded me i could make the buttons more interactive
+so while I was making the slider i also added some more interactivity.*/
+#slider-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 10px;
+  background: linear-gradient(
+    90deg,
+    rgb(244, 211, 94) 60%,
+    rgb(102, 102, 102, 1) 60%
+  );
+  outline: none;
+  opacity: 0.8;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 12px;
+}
+
+.slider:hover,
+#goals-list li button:hover,
+#add-goal:hover,
+.custom-controls button:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb,
+#goals-list li button,
+#add-goal,
+.custom-controls button {
+  cursor: pointer;
+}
+/*i only did google chrome because for this class we aren't using other browsers*/
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
 }
