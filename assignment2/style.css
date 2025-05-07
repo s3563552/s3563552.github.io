@@ -119,12 +119,12 @@ to avoid that i just put it outside of the <section>*/
 #goals-list li button,
 #add-goal {
   margin-left: 1rem;
-  padding: 0.25rem;
+  padding: 0.1rem;
   font-size: 1rem;
   background-color: var(--main-btn-bg-color);
   border: none;
   border-radius: 6px;
-  margin: 0.2rem;
+  margin: 0.7rem;
   color: var(--main-text-color);
   opacity: 0.8;
 }
