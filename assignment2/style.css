@@ -178,14 +178,14 @@ so while I was making the slider i also added some more interactivity.*/
   transition: opacity 0.2s;
   border-radius: 12px;
 }
-
+/*added some subtle interactivity where the buttons become brighter after you hover over them*/
 .slider:hover,
 #goals-list li button:hover,
 #add-goal:hover,
 .custom-controls button:hover {
   opacity: 1;
 }
-
+/*added this to better indicate that it's a button and they can interact with it.*/
 .slider::-webkit-slider-thumb,
 #goals-list li button,
 #add-goal,
@@ -200,4 +200,24 @@ so while I was making the slider i also added some more interactivity.*/
   height: 20px;
   background: white;
   border-radius: 50%;
+}
+/*gave the text input box the same opacity as other elements that are interactable to help encourage users to click or 
+at least hover over it*/
+#goal-text {
+  border-radius: 4px;
+  border: 3px solid var(--main-btn-bg-color);
+  /*experimented and realised the text-align works for text input boxes too!*/
+  text-align: center;
+  opacity: 0.8;
+}
+/*googled and found that focus is the status when the input text box is clicked
+wanted to get rid of the yucky white border since it was too bright and didn't really feel like it fit with the design*/
+
+#goal-text:focus {
+  /*googled and used this to help get rid of the default outline when the text input box is clicked
+https://stackoverflow.com/questions/14618028/remove-borders-around-html-input*/
+  outline: none;
+  border-color: var(--main-btn-bg-color);
+  /*had to make the opacity return to 1 here since it focus and hover are different conditions*/
+  opacity: 1;
 }

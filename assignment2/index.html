@@ -23,7 +23,7 @@
     <header>
       <h1>Pomodoro Study Buddy</h1>
     </header>
-    <!-- I'm reusing the old container and just putting everything inside of it.-->
+    <!--I'm reusing the old container and just putting everything inside of it.-->
     <main class="container">
       <!-- Media Player Section, I wanted to put the countdown timer and the button to start study
        and the button to mute/unmute the BGM in the same div, I will use css to position it so that
@@ -72,9 +72,13 @@
         after i implemented the list it would change the positioning of the text and button. It was probably due to some errors i originally had 
         in my style.css - this was just my work around.-->
         <!--this is a button which will combine with some js code to allow people to add goals to the goals list below-->
-        <!--changed from a text prompt pop up-->
+        <!--changed from a text prompt pop up, this is cleaner-->
         <h2 id="list-name">
-          <input type="text" placeholder="Study Session Goals" />
+          <input
+            id="goal-text"
+            type="text"
+            placeholder="Goals for this session?"
+          />
           <button id="add-goal">Add Goal</button>
         </h2>
       </section>

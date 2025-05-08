@@ -8,6 +8,7 @@ const muteImg = document.querySelector("#mute-button-img");
 //elements for the goals list
 const addGoalBtn = document.querySelector("#add-goal");
 const goalsList = document.querySelector("#goals-list");
+const goalText = document.querySelector("#goal-text");
 //volume slider
 const slider = document.querySelector(".slider");
 const output = document.querySelector("#volume");
@@ -105,7 +106,7 @@ function toggleMuteUnmute() {
     muteImg.src = "https://img.icons8.com/ios-glyphs/30/no-audio--v1.png";
   } else {
     //audioBGM.volume = 1; originally just had it as a mute un-mute button with no volume control
-    //no i set the unmuted volume to what it was before being muted
+    //now i set the unmuted volume to what it was before being muted
     audioBGM.volume = lastVolume;
     muteImg.src = "https://img.icons8.com/ios-glyphs/30/high-volume--v1.png";
     slider.value = Math.round(lastVolume * 100);
@@ -113,10 +114,11 @@ function toggleMuteUnmute() {
     //this helps store the last volume
   }
 }
-//this section is for the goal list, i will trigger it through the add goal button
+//this section is for the goal list, it takes text from the text input box
 function addGoal() {
-  //this prompts user for text
-  const text = prompt("Enter your study goal:");
+  const text = goalText.value;
+  //this prompts user for text, commented out after feedback
+  //const text = prompt("Enter your study goal:");
   //this stops the fucntion if nothing is typed - there's no reason to add no text to a list
   if (!text) return;
   // this makes a new list item - with the prompted text from user
@@ -136,6 +138,8 @@ function addGoal() {
   li.appendChild(removeBtn);
   // this line just adds the new list item onto the bottom of the list
   goalsList.appendChild(li);
+  //this clears the text input box after the goal has been added to the llist
+  goalText.value = "";
 }
 
 //volume slider, for setting volume
