@@ -138,6 +138,8 @@ rotate: 0deg;
 80%{
     translate: 0px -70px;
     scale: .8;
+}
+100%{
     rotate: 100deg;
 }
 
