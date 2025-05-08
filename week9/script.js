@@ -1,6 +1,16 @@
 const drawerButton = document.querySelector("#drawer-button");
 const sideDrawer = document.querySelector("#side-drawer");
 console.log(sideDrawer);
+
+const myDuck = document.querySelector("#my-duck");
+addEventListener("click" moveDuck());
+function moveDuck(){
+if (click);
+    myDuck.style.translate = "10px 10px";
+    
+}
+
+
 let isOpen = false;
 drawerButton.addEventListener("click", openDrawer);
 

@@ -32,15 +32,116 @@ body {
   /* background-color: cornsilk; */
   transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.5s ease;
 }
+
 button {
   padding: 10px 20px;
-  font-size: 1.2rem;
-  border-radius: 10px;
-  background-color: cornflowerblue;
-  border: none;
   cursor: pointer;
+  border: none;
+  transition: scale 0.3s ease background-color 0.3s ease;
+  background-color: coral;
 }
+
 button:hover {
-  background-color: cornflowerblue;
-  opacity: 0.9;
+  scale: 0.95;
+  background-color: rgba(255, 127, 80, 0.6);
+}
+
+#my-duck {
+  transition: fill 0.3s ease;
+}
+
+#my-duck:hover {
+  fill: #007bff;
+  scale: 0.9;
+}
+
+.box{
+    background-color: green;
+    animation-name: box-animation, border-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border: 30px dashed coral:
+}
+
+@keyframes box-animation{
+    0%{
+        background-color: #007bff;
+    }
+    25%{
+        background-color: yellow;
+    }
+    50%{
+        background-color: red;
+    }
+    75%{
+        background-color: purple;
+    }
+    100%{
+        background-color: #pink;
+    }
+}
+@keyframes border-animation{
+    0%{
+        border-color: white;
+    }
+    25%{
+        border-color: grey;
+    }
+    50%{
+        border-color: green;
+    }
+    75%{
+        border-color: purple;
+    }
+    100%{
+        border-color: yellow;
+    }
+}
+
+#spinner {
+    border: 6px solid #f3f3f3; /* Light grey */
+    border-top: 6px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: spinner 2s linear infinite; /* Spin animation */
+  }
+  
+  @keyframes spinner {
+    0% {
+      rotate: 0deg;
+      /* transform: rotate(0deg); */
+    }
+    100% {
+      rotate: 360deg;
+      /* transform: rotate(360deg); */
+    }
+  }
+  
+  .icon {
+    animation: bounce 2s infinite;
+  }
+
+@keyframes bounce{
+    0%, 20%, 50%, 80%, 100%{
+    translate: 0px 0px;
+    scale: 1;
+}
+0% {
+rotate: 0deg;
+}
+40%{
+    translate: 0px -40px;
+    scale: .6
+}
+80%{
+    translate: 0px -70px;
+    scale: .8;
+    rotate: 100deg;
+}
+
+}
+#my-duck{
+    animation-name: bounce 4s ease infinite;
 }
