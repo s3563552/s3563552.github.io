@@ -24,3 +24,8 @@ const name = draggedCard.querySelector(".card-front")
 
 
 const 
+
+function shuffleArray(array) {
+    const arr = [...array];
+    const j = Math.floor(Math.random)
+}
