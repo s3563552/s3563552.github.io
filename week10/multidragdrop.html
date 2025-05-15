@@ -11,18 +11,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="flip.css" />
-    <script src="flip.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="multidragdrop.js" defer></script>
   </head>
   <body>
-    <!-- Topic 1: Learn about hover effect -->
-    <div class="card-container">
-      <div class="card" draggable="true">
-        <div class="card-face"><img src="cloud.png" alt="Back" /></div>
-        <div class="card-face flip">
-          <img src="queen.png" alt="Queen" />
-        </div>
-      </div>
+    <!-- Topic 3: Learn about multi card drag and drop effect -->
+    <div id="game-screen">
+      <section>
+        <div class="deck"></div>
+        <div class="dropbox card-container"></div>
+      </section>
     </div>
   </body>
 </html>
