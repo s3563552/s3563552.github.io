@@ -7,12 +7,66 @@
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=Press+Start+2P&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <h1>Whack a Croc</h1>
     </header>
-    <main></main>
+    <main>
+      <!--I split the section for game info, messages and buttons from the section that holds the game.-->
+      <div class="gameinfo">
+        <div id="info">
+          <p>Score: <span id="score">0</span></p>
+          <p>Lives: <span id="lives">3</span></p>
+        </div>
+        <div id="tBtn">
+          <p id="msg"></p>
+          <button id="resetBtn" style="display: none">Restart Game</button>
+          <button id="startBtn">Start Game</button>
+          <p id="howTo">Don't let the crocs cross the line!</p>
+        </div>
+      </div>
+      <!--game holds teh river and the red line, each column or box holds the water svgs and a croc-->
+      <div class="game">
+        <div id="river">
+          <div class="box">
+            <div class="water">
+              <img src="water.svg" /><img src="water.svg" />
+            </div>
+            <span class="croc" id="c0"><img src="croc.svg" /></span>
+          </div>
+          <div class="box">
+            <div class="water">
+              <img src="water.svg" /><img src="water.svg" />
+            </div>
+            <span class="croc" id="c1"><img src="croc.svg" /></span>
+          </div>
+          <div class="box">
+            <div class="water">
+              <img src="water.svg" /><img src="water.svg" />
+            </div>
+            <span class="croc" id="c2"><img src="croc.svg" /></span>
+          </div>
+          <div class="box">
+            <div class="water">
+              <img src="water.svg" /><img src="water.svg" />
+            </div>
+            <span class="croc" id="c3"><img src="croc.svg" /></span>
+          </div>
+          <div class="box">
+            <div class="water">
+              <img src="water.svg" /><img src="water.svg" />
+            </div>
+            <span class="croc" id="c4"><img src="croc.svg" /></span>
+          </div>
+        </div>
+        <div id="red"></div>
+      </div>
+    </main>
     <footer>
       <p><a href="Credits.html">References</a> for sourced material.</p>
     </footer>
