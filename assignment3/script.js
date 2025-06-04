@@ -118,7 +118,8 @@ function whackCroc(e) {
     scoreDisplay.textContent = score;
     // Add animation crock when clicked
     crocEl.classList.add("whack");
-    setTimeout(() => crocEl.classList.remove("whack"), 300); // remove after animation
+    // remove after animation it's played so that it doesn't just keep playing it when the same croc spawns... took me way longer than it should have to realise this
+    setTimeout(() => crocEl.classList.remove("whack"), 300);
     //
     crocEl.style.opacity = "0";
     crocEl.style.top = "50px";
